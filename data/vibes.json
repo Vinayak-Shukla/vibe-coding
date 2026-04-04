@@ -1,0 +1,57 @@
+{
+  "lofi": {
+    "description": "Lofi hip hop beats",
+    "searchTerms": ["lofi hip hop beats to study", "lofi chill beats"],
+    "videos": [
+      "jfKfPfyJRdk",
+      "rUxyKA_-grg",
+      "7NOSDKb0HlU",
+      "5qap5aO4i9A",
+      "lTRiuFIWV54"
+    ]
+  },
+  "jazz": {
+    "description": "Jazz cafe vibes",
+    "searchTerms": ["jazz lofi cafe music", "smooth jazz beats"],
+    "videos": [
+      "HuFYqnbVbzY",
+      "fEvM-OUbaKs",
+      "Dx5qFachd3A",
+      "kgx4WGK0oNU",
+      "VMAPTo7RVCo"
+    ]
+  },
+  "rain": {
+    "description": "Lofi + rain ambience",
+    "searchTerms": ["lofi rain sounds study", "rain lofi beats"],
+    "videos": [
+      "iR7HRMdVJbM",
+      "mPZkdNFkNps",
+      "lP26UCnoH9s",
+      "jSfKQ5-bm34",
+      "wAPCSnAhhC8"
+    ]
+  },
+  "chill": {
+    "description": "Chill electronic / chillhop",
+    "searchTerms": ["chillhop music", "chill electronic beats"],
+    "videos": [
+      "5yx6BWlEVcY",
+      "lCOF9LN_Zxs",
+      "36YnV9STBqc",
+      "7zp1TbLFPp8",
+      "2K-guboXPCQ"
+    ]
+  },
+  "focus": {
+    "description": "Deep focus / minimal beats",
+    "searchTerms": ["deep focus music for coding", "minimal ambient focus"],
+    "videos": [
+      "yIQd2Ya0Ziw",
+      "jWFWazj7gFk",
+      "co3JVtLxiVE",
+      "w0HFoyMYjko",
+      "g0JrqJwus2g"
+    ]
+  }
+}

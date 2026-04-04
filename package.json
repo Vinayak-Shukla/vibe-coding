@@ -1,0 +1,20 @@
+{
+  "name": "vibe-coding",
+  "version": "1.0.0",
+  "description": "Claude Code plugin — play lofi beats while Claude thinks",
+  "author": "Vinayak Shukla",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "lofi",
+    "music",
+    "vibe-coding"
+  ],
+  "dependencies": {
+    "youtube-sr": "^4.3.12"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

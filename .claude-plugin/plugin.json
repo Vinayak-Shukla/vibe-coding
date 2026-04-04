@@ -1,0 +1,10 @@
+{
+  "name": "vibe-coding",
+  "version": "1.0.0",
+  "description": "Play lofi beats and chill music while Claude thinks — vibe while you vibe-code",
+  "author": {
+    "name": "Vinayak Shukla"
+  },
+  "license": "MIT",
+  "skills": ["./skills/"]
+}
