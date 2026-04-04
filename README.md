@@ -14,21 +14,27 @@ A [Claude Code](https://claude.ai/claude-code) plugin that automatically plays c
 
 ## Setup
 
-**One-time install (30 seconds):**
-
 ```bash
-# 1. Install system dependencies
-brew install yt-dlp ffmpeg
-
-# 2. Install the plugin
-claude plugin add <user>/vibe-coding
+# Install the plugin
+claude plugin add Vinayak-Shukla/vibe-coding
 ```
 
-Or test locally:
+Then install system dependencies — pick whichever is easiest:
 
+**Option A: Let the plugin do it**
+```
+/vibe-coding:setup
+```
+
+**Option B: One-liner**
 ```bash
-git clone https://github.com/<user>/vibe-coding.git
-claude --plugin-dir ./vibe-coding
+brew install yt-dlp ffmpeg
+```
+
+**Option C: Without Homebrew**
+```bash
+pip3 install yt-dlp        # Python package
+# ffmpeg: download from https://ffmpeg.org/download.html
 ```
 
 npm dependencies install automatically on first session.
@@ -37,6 +43,7 @@ npm dependencies install automatically on first session.
 
 | Command | Description |
 |---------|-------------|
+| `/vibe-coding:setup` | Install system dependencies (yt-dlp, ffmpeg) |
 | `/vibe-coding:play [url]` | Play music (current vibe, or a specific YouTube URL) |
 | `/vibe-coding:stop` | Stop the music |
 | `/vibe-coding:status` | Show what's playing, volume, auto-play state |
@@ -83,8 +90,9 @@ npm dependencies install automatically on first session.
 
 1. A lightweight background daemon starts when your Claude session begins
 2. When you send a message (Claude starts thinking), the `UserPromptSubmit` hook tells the daemon to play
-3. When Claude responds (the `Stop` hook fires), the daemon stops playback
-4. Audio pipeline: `yt-dlp` streams audio → piped to `ffplay` for playback
+3. When Claude responds (the `Stop` hook fires), the daemon **pauses** playback
+4. Next prompt **resumes** the same track from where it left off
+5. Tracks are pre-resolved in the background for instant startup (~150ms)
 5. When your session ends, the daemon shuts down cleanly
 
 ## Requirements
