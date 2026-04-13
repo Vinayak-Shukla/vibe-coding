@@ -1,0 +1,19 @@
+{
+  "name": "vibe-coding-marketplace",
+  "metadata": {
+    "description": "Community plugins for Claude Code"
+  },
+  "owner": {
+    "name": "Vinayak Shukla",
+    "github": "Vinayak-Shukla"
+  },
+  "plugins": [
+    {
+      "name": "vibe-coding",
+      "source": {
+        "source": "github",
+        "repo": "Vinayak-Shukla/vibe-coding"
+      }
+    }
+  ]
+}
