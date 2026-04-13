@@ -1,0 +1,18 @@
+{
+  "name": "Claude Plugin Marketplace",
+  "description": "Community-maintained registry of Claude Code plugins",
+  "updated": "2026-04-13",
+  "plugins": [
+    {
+      "id": "vibe-coding",
+      "displayName": "Vibe Coding",
+      "description": "Play lofi beats and chill music while Claude thinks — auto-plays on prompt, pauses on response.",
+      "author": "Vinayak-Shukla",
+      "repo": "Vinayak-Shukla/vibe-coding",
+      "install": "claude plugin add Vinayak-Shukla/vibe-coding",
+      "tags": ["music", "lofi", "productivity", "audio"],
+      "platform": ["macOS"],
+      "featured": true
+    }
+  ]
+}

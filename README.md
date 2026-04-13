@@ -1,45 +1,40 @@
-# vibe-coding
+# Claude Plugin Marketplace
+
+> Community-maintained plugins for [Claude Code](https://claude.ai/claude-code)
+
+A growing directory of plugins that extend Claude Code with new skills, tools, and automations. Install any plugin with a single command.
+
+---
+
+## Plugins
+
+### Featured
+
+| Plugin | Description | Author | Install |
+|--------|-------------|--------|---------|
+| [Vibe Coding](#vibe-coding) | Lofi beats while Claude thinks | [@Vinayak-Shukla](https://github.com/Vinayak-Shukla) | `claude plugin add Vinayak-Shukla/vibe-coding` |
+
+---
+
+## Plugin Details
+
+### Vibe Coding
 
 > Lofi beats while Claude thinks. Vibe while you vibe-code.
 
-A [Claude Code](https://claude.ai/claude-code) plugin that automatically plays chill music while Claude is working on your code. When Claude starts thinking, the music starts. When Claude responds, it stops. Simple.
+Automatically plays chill music while Claude is working on your code. When Claude starts thinking, the music starts. When Claude responds, it stops.
 
-## Features
-
-- **Auto-play** — Music plays while Claude thinks, stops when done
-- **Vibes presets** — Switch between `lofi`, `jazz`, `rain`, `chill`, `focus`
-- **Custom vibes** — Save your own YouTube URLs (playlists, podcasts, anything)
-- **Volume control** — Adjust without leaving your terminal
-- **Custom URLs** — Play any YouTube video or playlist on demand
-
-## Setup
-
+**Install**
 ```bash
-# Install the plugin
 claude plugin add Vinayak-Shukla/vibe-coding
 ```
 
-Then install system dependencies — pick whichever is easiest:
-
-**Option A: Let the plugin do it**
+**Setup** (after installing)
 ```
 /vibe-coding:setup
 ```
 
-**Option B: One-liner**
-```bash
-brew install yt-dlp ffmpeg
-```
-
-**Option C: Without Homebrew**
-```bash
-pip3 install yt-dlp        # Python package
-# ffmpeg: download from https://ffmpeg.org/download.html
-```
-
-npm dependencies install automatically on first session.
-
-## Commands
+**Skills**
 
 | Command | Description |
 |---------|-------------|
@@ -52,66 +47,39 @@ npm dependencies install automatically on first session.
 | `/vibe-coding:vibe [name]` | Switch vibe preset (no arg = list vibes) |
 | `/vibe-coding:save-vibe <name> <url>` | Save a custom vibe with a YouTube URL |
 
-## Built-in Vibes
+**Vibes**: `lofi` · `jazz` · `rain` · `chill` · `focus` + custom
 
-| Vibe | Description |
-|------|-------------|
-| `lofi` | Lofi hip hop beats (default) |
-| `jazz` | Jazz cafe vibes |
-| `rain` | Lofi + rain ambience |
-| `chill` | Chill electronic / chillhop |
-| `focus` | Minimal, deep focus music |
+**Requirements**: macOS · Node.js >=18 · yt-dlp · ffmpeg
 
-## Examples
+**Source**: [Vinayak-Shukla/vibe-coding](https://github.com/Vinayak-Shukla/vibe-coding)
 
-```
-# Just start coding — music auto-plays when Claude thinks!
+---
 
-# Switch to jazz vibes
-/vibe-coding:vibe jazz
+## Submit Your Plugin
 
-# Lower the volume
-/vibe-coding:volume 30
+Want your plugin listed here? [Open a pull request](https://github.com/Vinayak-Shukla/vibe-coding/pulls) — see [CONTRIBUTING.md](./CONTRIBUTING.md) for the format.
 
-# Play a specific YouTube video
-/vibe-coding:play https://youtube.com/watch?v=jfKfPfyJRdk
+Requirements:
+- Public GitHub repo
+- Valid `plugin.json` (see [Claude plugin docs](https://docs.anthropic.com/en/claude-code/plugins))
+- Clear README with install instructions
 
-# Save your favorite podcast as a vibe
-/vibe-coding:save-vibe podcast https://youtube.com/watch?v=...
+---
 
-# Switch to your podcast
-/vibe-coding:vibe podcast
+## Building a Plugin
 
-# Disable auto-play (manual control only)
-/vibe-coding:toggle
+Claude Code plugins live in a GitHub repo with a `.claude-plugin/plugin.json` manifest. Users install them with:
+
+```bash
+claude plugin add <github-user>/<repo>
 ```
 
-## How It Works
+Resources:
+- [Claude Code Plugin Docs](https://docs.anthropic.com/en/claude-code/plugins)
+- [Example: vibe-coding source](./.claude-plugin/plugin.json)
 
-1. A lightweight background daemon starts when your Claude session begins
-2. When you send a message (Claude starts thinking), the `UserPromptSubmit` hook tells the daemon to play
-3. When Claude responds (the `Stop` hook fires), the daemon **pauses** playback
-4. Next prompt **resumes** the same track from where it left off
-5. Tracks are pre-resolved in the background for instant startup (~150ms)
-5. When your session ends, the daemon shuts down cleanly
-
-## Requirements
-
-- **Node.js** >= 18
-- **yt-dlp** — YouTube audio extraction (`brew install yt-dlp`)
-- **ffmpeg** — Audio playback via ffplay (`brew install ffmpeg`)
-- macOS (Linux support planned)
-
-## Troubleshooting
-
-**No sound?** Check dependencies: `node bin/check-deps.js`
-
-**Wrong volume?** Set it: `/vibe-coding:volume 50`
-
-**Don't want auto-play?** Toggle it: `/vibe-coding:toggle`
-
-**Want to use mpv instead of ffplay?** Just install it: `brew install mpv`. The plugin auto-detects available players (ffplay > mpv > afplay).
+---
 
 ## License
 
-MIT
+This registry is MIT licensed. Individual plugins carry their own licenses.

@@ -1,0 +1,27 @@
+{
+  "id": "vibe-coding",
+  "name": "vibe-coding",
+  "displayName": "Vibe Coding",
+  "description": "Play lofi beats and chill music while Claude thinks — vibe while you vibe-code. Auto-plays on prompt, pauses on response.",
+  "author": {
+    "name": "Vinayak Shukla",
+    "github": "Vinayak-Shukla"
+  },
+  "repo": "Vinayak-Shukla/vibe-coding",
+  "install": "claude plugin add Vinayak-Shukla/vibe-coding",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tags": ["music", "lofi", "productivity", "audio", "vibe"],
+  "platform": ["macOS"],
+  "skills": [
+    "/vibe-coding:setup",
+    "/vibe-coding:play",
+    "/vibe-coding:stop",
+    "/vibe-coding:status",
+    "/vibe-coding:volume",
+    "/vibe-coding:toggle",
+    "/vibe-coding:vibe",
+    "/vibe-coding:save-vibe"
+  ],
+  "featured": true
+}
